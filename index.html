@@ -1,0 +1,1139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10233f">
+<meta name="description" content="Chigozirim Wilson Weli - Frontend Developer, UX/UI Designer and AI Specialist.">
+<title>Chigozirim Wilson Weli | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#10233f;
+  --blue:#376baf;
+  --silver:#edf1f5;
+  --ink:#172337;
+  --muted:#657286;
+  --line:#dfe5ec;
+  --white:#fff;
+  --shadow:0 18px 55px rgba(16,35,63,.09);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
+
+body {
+  font-family:"DM Sans",sans-serif;
+  background:#fbfcfe;
+  color:var(--ink);
+  line-height:1.65;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+button {
+  font:inherit;
+}
+
+.container {
+  width:min(1160px,calc(100% - 40px));
+  margin:auto;
+}
+
+h1,h2,h3,.brand {
+  font-family:"Manrope",sans-serif;
+}
+
+section {
+  padding:95px 0;
+}
+
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.eyebrow:before {
+  content:"";
+  width:25px;
+  height:2px;
+  background:currentColor;
+}
+
+.section-title {
+  font-size:clamp(30px,4vw,45px);
+  line-height:1.15;
+  letter-spacing:-1.5px;
+  color:var(--navy);
+  margin:12px 0;
+}
+
+.section-intro {
+  max-width:650px;
+  color:var(--muted);
+}
+
+/* NAVIGATION */
+
+.site-header {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:75px;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-wrap {
+  height:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand {
+  font-size:19px;
+  font-weight:800;
+  color:var(--navy);
+}
+
+.brand span {
+  color:var(--blue);
+}
+
+.nav-links {
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.nav-links a {
+  font-size:13px;
+  font-weight:700;
+  color:#536176;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color:var(--blue);
+}
+
+.nav-cta,
+.btn {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  border-radius:50px;
+  padding:13px 22px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.nav-cta,
+.btn-primary {
+  background:var(--navy);
+  color:white;
+}
+
+.nav-cta:hover,
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+.menu-toggle {
+  display:none;
+  background:none;
+  border:0;
+  font-size:25px;
+  cursor:pointer;
+  color:var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  min-height:730px;
+  padding:150px 0 90px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(82,132,190,.17),transparent 30%),
+    linear-gradient(135deg,#fff,#f0f4f8);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:55px;
+  align-items:center;
+}
+
+.availability {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 13px;
+  background:#f5fbf6;
+  color:#3e7652;
+  border:1px solid #dce8df;
+  border-radius:50px;
+  font-size:12px;
+  margin-bottom:25px;
+}
+
+.availability i {
+  width:7px;
+  height:7px;
+  background:#48a56b;
+  border-radius:50%;
+}
+
+.hero h1 {
+  font-size:clamp(45px,6vw,78px);
+  line-height:1.04;
+  letter-spacing:-4px;
+  color:var(--navy);
+}
+
+.hero h1 span {
+  color:var(--blue);
+}
+
+.hero-subtitle {
+  font-size:17px;
+  font-weight:700;
+  color:#526176;
+  margin:22px 0 14px;
+}
+
+.hero-copy {
+  max-width:590px;
+  color:var(--muted);
+}
+
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:30px;
+}
+
+.btn-outline {
+  border:1px solid #cbd5e1;
+  color:var(--navy);
+  background:white;
+}
+
+.hero-meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  margin-top:38px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.hero-meta strong {
+  display:block;
+  color:var(--navy);
+  font-size:17px;
+}
+
+.portrait-shell {
+  position:relative;
+  max-width:430px;
+  margin:auto;
+}
+
+.portrait-frame {
+  aspect-ratio:4/5;
+  padding:13px;
+  border-radius:30px;
+  background:linear-gradient(145deg,#fff,#dce5ee);
+  box-shadow:25px 28px 65px rgba(16,35,63,.15);
+}
+
+.portrait-placeholder {
+  width:100%;
+  height:100%;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:25px;
+  color:white;
+  background:linear-gradient(145deg,#7997b8,#10233f);
+}
+
+.portrait-placeholder .portrait-icon {
+  font-size:60px;
+  margin-bottom:15px;
+}
+
+.portrait-placeholder p {
+  font-size:14px;
+}
+
+.portrait-note {
+  display:block;
+  margin-top:15px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.floating-card {
+  position:absolute;
+  background:white;
+  padding:14px 17px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.floating-card strong {
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+}
+
+.floating-card small {
+  color:var(--muted);
+  font-size:11px;
+}
+
+.float-one {
+  left:-35px;
+  bottom:55px;
+}
+
+.float-two {
+  right:-25px;
+  top:50px;
+}
+
+/* STRIP */
+
+.trust-strip {
+  background:white;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
+}
+
+.trust-inner {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+  color:#657286;
+  font-size:12px;
+  font-weight:700;
+}
+
+.trust-inner b {
+  color:var(--navy);
+  margin-right:7px;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:65px;
+}
+
+.about-aside {
+  padding:30px;
+  border-radius:22px;
+  background:linear-gradient(145deg,var(--navy),#24466e);
+  color:white;
+  box-shadow:var(--shadow);
+}
+
+.about-aside .big-number {
+  font-size:55px;
+  font-weight:800;
+  letter-spacing:-3px;
+}
+
+.about-aside p {
+  color:#d1dbea;
+  font-size:14px;
+}
+
+.about-aside hr {
+  border:0;
+  border-top:1px solid rgba(255,255,255,.2);
+  margin:25px 0;
+}
+
+.about-copy p {
+  color:var(--muted);
+  margin:15px 0;
+}
+
+.about-pills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:23px;
+}
+
+.pill {
+  padding:8px 13px;
+  border:1px solid var(--line);
+  border-radius:50px;
+  background:white;
+  color:#42536b;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* SKILLS */
+
+.skills-section {
+  background:#f2f5f8;
+}
+
+.skills-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:40px;
+}
+
+.skill-card,
+.project-card,
+.credential-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:19px;
+  padding:25px;
+  transition:.3s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.credential-card:hover {
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.icon-box {
+  width:47px;
+  height:47px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:#edf3fa;
+  color:var(--blue);
+  font-weight:800;
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+.skill-card h3,
+.project-card h3,
+.credential-card h3 {
+  color:var(--navy);
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.skill-card p,
+.project-card p,
+.credential-card p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.skill-level {
+  height:5px;
+  background:#e9eef4;
+  border-radius:10px;
+  margin-top:20px;
+  overflow:hidden;
+}
+
+.skill-level span {
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,var(--blue),#7fa6d1);
+}
+
+/* PROJECTS */
+
+.projects-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:40px;
+}
+
+.project-visual {
+  height:180px;
+  padding:18px;
+  background:linear-gradient(135deg,#dfe8f2,#f5f7fa);
+  border-radius:13px;
+  margin-bottom:20px;
+}
+
+.browser {
+  height:100%;
+  padding:12px;
+  background:white;
+  border-radius:8px;
+  box-shadow:0 10px 22px rgba(16,35,63,.08);
+}
+
+.browser-dots {
+  display:flex;
+  gap:5px;
+  margin-bottom:12px;
+}
+
+.browser-dots i {
+  width:6px;
+  height:6px;
+  background:#9aabc0;
+  border-radius:50%;
+}
+
+.mock-line {
+  height:7px;
+  width:65%;
+  background:#dce5ef;
+  border-radius:5px;
+  margin:8px 0;
+}
+
+.mock-line.short {
+  width:38%;
+}
+
+.mock-block {
+  height:55px;
+  background:linear-gradient(100deg,#dbe6f1,#eef2f7);
+  border-radius:6px;
+  margin-top:12px;
+}
+
+.project-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:15px 0;
+}
+
+.project-tags span {
+  padding:5px 9px;
+  border-radius:6px;
+  background:#f0f4f8;
+  color:#526b89;
+  font-size:11px;
+  font-weight:700;
+}
+
+.project-links {
+  display:flex;
+  gap:15px;
+  margin-top:17px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+}
+
+/* EDUCATION */
+
+.education-section {
+  background:#f2f5f8;
+}
+
+.timeline {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  margin-top:40px;
+}
+
+.credential-card {
+  border-left:3px solid var(--blue);
+}
+
+.status {
+  display:inline-block;
+  margin-top:13px;
+  padding:5px 10px;
+  background:#fff7e6;
+  color:#8a641d;
+  border-radius:50px;
+  font-size:11px;
+  font-weight:800;
+}
+
+/* CONTACT */
+
+.contact-panel {
+  margin-top:38px;
+  padding:45px;
+  border-radius:27px;
+  background:linear-gradient(120deg,#10233f,#24476f);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr .85fr;
+  gap:40px;
+  box-shadow:0 24px 65px rgba(16,35,63,.18);
+}
+
+.contact-panel h2 {
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.12;
+  margin:13px 0;
+}
+
+.contact-panel p {
+  color:#cfdae8;
+}
+
+.contact-list {
+  display:grid;
+  gap:13px;
+  align-content:center;
+}
+
+.contact-item {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:13px 15px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:13px;
+  color:#eef4fb;
+  font-size:13px;
+}
+
+.contact-item b {
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.12);
+  border-radius:10px;
+}
+
+.social-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+}
+
+.social-links a {
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:50px;
+  font-size:12px;
+  color:#e7eff8;
+}
+
+/* FOOTER */
+
+footer {
+  padding:27px 0;
+  background:#0b1a2e;
+  color:#aebdd0;
+  font-size:12px;
+}
+
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.footer-inner strong {
+  color:white;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:900px) {
+  .hero-grid {
+    gap:30px;
+  }
+
+  .skills-grid,
+  .project-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:720px) {
+  section {
+    padding:70px 0;
+  }
+
+  .menu-toggle {
+    display:block;
+  }
+
+  .nav-cta {
+    display:none;
+  }
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:15px 25px;
+    flex-direction:column;
+    gap:0;
+    box-shadow:var(--shadow);
+  }
+
+  .nav-links.open {
+    display:flex;
+  }
+
+  .nav-links a {
+    display:block;
+    padding:12px 0;
+  }
+
+  .hero {
+    padding:120px 0 70px;
+  }
+
+  .hero-grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero-content {
+    text-align:center;
+  }
+
+  .hero .eyebrow {
+    justify-content:center;
+  }
+
+  .hero-copy {
+    margin:auto;
+  }
+
+  .hero-actions,
+  .hero-meta {
+    justify-content:center;
+  }
+
+  .portrait-shell {
+    width:82%;
+    margin-top:25px;
+  }
+
+  .about-grid,
+  .contact-panel {
+    grid-template-columns:1fr;
+  }
+
+  .timeline {
+    grid-template-columns:1fr;
+  }
+
+  .trust-inner {
+    justify-content:center;
+  }
+}
+
+@media(max-width:480px) {
+  .hero h1 {
+    font-size:45px;
+  }
+
+  .skills-grid,
+  .project-grid {
+    grid-template-columns:1fr;
+  }
+
+  .contact-panel {
+    padding:27px;
+  }
+
+  .float-one {
+    left:-12px;
+  }
+
+  .float-two {
+    right:-12px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+
+  .reveal {
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="#home">
+      CHIGOZIRIM<span>.</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Expertise</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Let's Connect ↗</a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <div class="availability">
+        <i></i> Open to meaningful opportunities
+      </div>
+
+      <div class="eyebrow">
+        Digital craft · Human-centred thinking
+      </div>
+
+      <h1>
+        Chigozirim<br>
+        Wilson <span>Weli.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Frontend Developer · UX/UI Designer · AI Specialist
+      </p>
+
+      <p class="hero-copy">
+        I create thoughtful digital experiences by combining
+        frontend development, user-focused design and an evolving
+        understanding of artificial intelligence. My approach is
+        grounded in clarity, functionality and continuous learning.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">
+          Explore My Work ↗
+        </a>
+
+        <a class="btn btn-outline" href="#contact">
+          Get In Touch
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <strong>10–20 Years</strong>
+          Overall professional experience*
+        </div>
+
+        <div>
+          <strong>Web & Digital</strong>
+          Areas of focus
+        </div>
+
+        <div>
+          <strong>Goal Zero</strong>
+          Safety mindset
+        </div>
+      </div>
+
+    </div>
+
+    <!-- HERO IMAGE PLACEHOLDER -->
+
+    <div class="portrait-shell">
+      <div class="portrait-frame">
+
+        <div class="portrait-placeholder">
+          <div>
+            <div class="portrait-icon">✦</div>
+            <p>
+              <strong>YOUR HERO IMAGE</strong><br>
+              Replace this area with your professional photograph.
+            </p>
+            <span class="portrait-note">
+              Professional portrait placeholder
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="floating-card float-one">
+        <strong>Digital-first mindset</strong>
+        <small>Design · Build · Improve</small>
+      </div>
+
+      <div class="floating-card float-two">
+        <strong>Safety Officer</strong>
+        <small>Goal Zero approach</small>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL AREAS -->
+
+<div class="trust-strip">
+  <div class="container trust-inner">
+    <span><b>01</b> Frontend Development</span>
+    <span><b>02</b> UX/UI Design</span>
+    <span><b>03</b> AI Exploration</span>
+    <span><b>04</b> Safety Awareness</span>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+
+<section id="about">
+  <div class="container about-grid">
+
+    <aside class="about-aside reveal">
+
+      <div style="font-size:12px;color:#b8cce3;">
+        PROFESSIONAL SNAPSHOT
+      </div>
+
+      <div class="big-number">10–20</div>
+
+      <p>
+        Years of overall professional experience, bringing
+        a practical, responsible and improvement-focused
+        approach to every engagement.
+      </p>
+
+      <hr>
+
+      <div style="font-size:12px;color:#b8cce3;">
+        ADDITIONAL PROFESSIONAL ROLE
+      </div>
+
+      <h3 style="margin:8px 0;">Safety Officer</h3>
+
+      <p>
+        Committed to safe systems of work, awareness
+        and a Goal Zero mindset.
+      </p>
+
+    </aside>
+
+    <div class="about-copy reveal">
+
+      <div class="eyebrow">A Little About Me</div>
+
+      <h2 class="section-title">
+        Technology with purpose. Design with people in mind.
+      </h2>
+
+      <p>
+        I am <strong>Chigozirim Wilson Weli</strong>, a digital
+        professional focused on frontend web development,
+        UX/UI design and artificial intelligence.
+      </p>
+
+      <p>
+        I value digital products that are intuitive, accessible,
+        responsive and built to solve real problems.
+      </p>
+
+      <p>
+        My core web technologies are HTML, CSS and JavaScript.
+        I enjoy turning ideas into clear, usable web experiences,
+        paying attention to the details that make a website
+        feel polished across devices.
+      </p>
+
+      <p>
+        Alongside my digital interests, I bring a Safety Officer
+        perspective shaped by responsibility, discipline and
+        the principle of Goal Zero.
+      </p>
+
+      <p>
+        I am also continuing to develop my knowledge in
+        artificial intelligence and emerging digital tools.
+      </p>
+
+      <div class="about-pills">
+        <span class="pill">Problem Solving</span>
+        <span class="pill">Responsive Thinking</span>
+        <span class="pill">User-Centred Design</span>
+        <span class="pill">Continuous Learning</span>
+        <span class="pill">Safety Mindset</span>
+      </div>
+
+      <p style="font-size:12px;margin-top:20px;">
+        *Overall professional experience as supplied;
+        not exclusively attributed to frontend development.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section class="skills-section" id="skills">
+  <div class="container">
+
+    <div class="eyebrow">What I Work With</div>
+
+    <h2 class="section-title">
+      Core Skills & Expertise
+    </h2>
+
+    <p class="section-intro">
+      A focused foundation in technologies and disciplines
+      that support effective, modern digital experiences.
+    </p>
+
+    <div class="skills-grid">
+
+      <article class="skill-card reveal">
+        <div class="icon-box">⌘</div>
+        <h3>HTML5</h3>
+        <p>
+          Semantic page structure, accessible content hierarchy
+          and clean document foundations.
+        </p>
+        <div class="skill-level">
+          <span style="width:82%"></span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="icon-box">◇</div>
+        <h3>CSS3</h3>
+        <p>
+          Responsive layouts, visual systems, typography,
+          transitions and polished interfaces.
+        </p>
+        <div class="skill-level">
+          <span style="width:80%"></span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="icon-box">JS</div>
+        <h3>JavaScript</h3>
+        <p>
+          Vanilla JavaScript for interactive components,
+          user interactions and dynamic behaviour.
+        </p>
+        <div class="skill-level">
+          <span style="width:72%"></span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="icon-box">◎</div>
+        <h3>UX/UI Design</h3>
+        <p>
+          Intuitive journeys, visual consistency,
+          usability and user-centred decisions.
+        </p>
+        <div class="skill-level">
+          <span style="width:70%"></span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="icon-box">✧</div>
+        <h3>AI & Prompt Engineering</h3>
+        <p>
+          Exploring AI-assisted workflows, structured
+          prompting and practical digital applications.
+        </p>
+        <div class="skill-level">
+          <span style="width:65%"></sp
